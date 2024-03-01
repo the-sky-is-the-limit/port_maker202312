@@ -10,4 +10,3 @@ japanize_matplotlib
 openpyxl
 pyarrow
 scipy
-from scipy import stats
