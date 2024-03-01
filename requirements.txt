@@ -9,3 +9,4 @@ seaborn
 japanize_matplotlib
 openpyxl
 pyarrow
+scipy
