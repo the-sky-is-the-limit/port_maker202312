@@ -459,7 +459,8 @@ def plot_annualized_return_distribution(df_price):
     # 年率のリスクとリターンを計算
     sns.set_theme(font='IPAexGothic', context='notebook')
     monthly_returns = df_price.pct_change().dropna()
-    annual_return = (monthly_returns.mean() + 1) ** 12 - 1
+    annual_return =(df[f'{x}'].dropna().iloc[-1]/df[f'{x}'].dropna().iloc[0])**(12/x_len)-1
+    # annual_return = (monthly_returns.mean() + 1) ** 12 - 1
     annual_std = monthly_returns.std() * np.sqrt(12)
 
     # DataFrame の値をスカラーに変換
