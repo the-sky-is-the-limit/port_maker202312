@@ -534,7 +534,8 @@ if uploaded_file is not None:
     stocks = list(data.columns)
 
     selected_stocks = st.sidebar.multiselect('Select portfolio stocks', stocks)
-    selected_index = st.sidebar.selectbox('Select an index for comparison', stocks)
+    default_index = "世界株"
+    selected_index = st.sidebar.selectbox('Select an index for comparison', stocks, index=stocks.index(default_index) if default_index in stocks else 0)
     pf_name = st.sidebar.text_input("Enter portfolio name", "PF")
 
     # インデックスがポートフォリオ銘柄に含まれているかチェック
