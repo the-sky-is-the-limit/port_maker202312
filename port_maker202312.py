@@ -24,7 +24,9 @@ def to_percentage(value):
     if isinstance(value, str):
         return value
     else:
-        return f"{round(value * 100, 2)}%"
+        return f"{round(value * 100, 2)}"
+        #return f"{round(value * 100, 2)}%"
+        
 
 # to_percentage2: 値をパーセンテージ形式に変換する別の関数（小数点以下の桁数が異なる）
 def to_percentage2(value):
